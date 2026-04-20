@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/src/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Home | Java News Site</title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <ul class="flex flex-row justify-end gap-5 text-center fixed h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50">
+    <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
+  </ul>
+
+  <div class="flex flex-col md:flex-row mt-16">
+
+    <section id="latest-news">
+      <div class="block md:w-64 md:flex-shrink-0 md:border-l md:sticky md:top-16 p-6 border-t md:border-t-0">
+        <h1 class="text-2xl text-wrap text-center ">Latest news</h1>
+        <p class="mt-4 mb-4 pb-4 border-b text-gray-600 hover:text-gray-400"><a href="javabestlanguage.html">Java is the
+            best programming language in the world</a></p>
+        <p class="mt-4 mb-4 pb-4 border-b text-gray-600 hover:text-gray-400"><a
+            href="springbootwinscompetition.html">Spring Boot wins big competition</a></p>
+      </div>
+    </section>
+
+
+
+
+    <div class="flex-1 px-4 mt-4">
+
+      <h1 class="text-3xl font-bold p-3" id="java">Java</h1>
+      <a href="javabestlanguage.html">
+        <div class="w-full p-2 shadow-2xl my-4 hover:bg-gray-500 cursor-pointer">
+          <h1 class="text-4xl m-5 p-10 text-wrap">Java is now officially the best programming language in the world</h1>
+          <p class="m-5">"Java is the best"</p>
+        </div>
+      </a>
+
+      <a href="javaphone.html">
+        <div class="w-full p-2 shadow-2xl my-4 hover:bg-gray-500 cursor-pointer">
+          <h1 class="text-4xl m-5 p-10 text-wrap">Java is now optimized to be built on with a phone</h1>
+          <p class="m-5">"So working on the move is a thing now"</p>
+        </div>
+      </a>
+
+
+      <h1 class="text-3xl font-bold p-3" id="springboot">Spring Boot</h1>
+      <a href="springbootwinscompetition.html">
+        <div class="w-full p-2 shadow-2xl my-4 hover:bg-gray-500 cursor-pointer">
+          <h1 class="text-4xl m-5 p-10 text-wrap">Spring Boot wins competition between frameworks</h1>
+          <p class="m-5">"Spring Boot just knows what is doing."</p>
+        </div>
+      </a>
+
+    </div>
+
+
+  </div>
+
+  <footer class="mt-10 w-full flex flex-col p-6 md:p-10 border-t">
+
+    <div class="flex flex-col md:flex-row justify-around items-start gap-8">
+
+      <div class="flex flex-col gap-4">
+        <h1 class="font-bold text-lg">Socials</h1>
+        <div class="flex flex-row gap-4">
+          <a href="https://github.com/" class="hover:opacity-70 transition">
+            <i class="fab fa-github fa-2xl"></i>
+          </a>
+          <a href="https://www.facebook.com/" class="hover:opacity-70 transition">
+            <i class="fab fa-facebook fa-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com/" class="hover:opacity-70 transition">
+            <i class="fab fa-instagram fa-2xl"></i>
+          </a>
+          <a href="https://www.tiktok.com/" class="hover:opacity-70 transition">
+            <i class="fab fa-tiktok fa-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/" class="hover:opacity-70 transition">
+            <i class="fab fa-linkedin fa-2xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <h1 class="font-bold text-lg">Contact us</h1>
+        <a href="https://mail.google.com/" class="flex items-center gap-2 hover:opacity-70 transition">
+          <i class="fas fa-envelope fa-2xl"></i>
+          <span>javanews@dev.com</span>
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <h1 class="font-bold text-lg">About Us</h1>
+        <p class="tracking-wide">The Best News Site for Java Developers.</p>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-400 text-center mt-8">© <span id="year"></span> JavaNews</p>
+
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+
+</html>
