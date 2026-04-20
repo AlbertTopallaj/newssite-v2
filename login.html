@@ -10,56 +10,63 @@
 </head>
 
 <body>
-    <form>
-        <span>Username</span>
-        <input placeholder="Enter your username"></input>
-        <span>Password</span>
-        <input placeholder="Enter your password"></input>
-        <button>Login</button>
+    <form
+        class="flex flex-col gap-2 w-full max-w-md mx-auto mt-20 p-10 bg-white rounded-xl shadow-sm border border-gray-200">
+        <h2 class="text-xl font-bold text-gray-800 mb-2">Admin Login</h2>
+        <span class="text-sm font-medium text-gray-600 mt-2">Username</span>
+        <input
+            class="px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:border-gray-500 transition"
+            placeholder="Enter your username"></input>
+        <span class="text-sm font-medium text-gray-600 mt-2">Password</span>
+        <input
+            class="px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:border-gray-500 transition"
+            placeholder="Enter your password"></input>
+        <button
+            class="mt-4 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition cursor-pointer">Login</button>
     </form>
 
-     <footer class="mt-10 w-full flex flex-col p-6 md:p-10 border-t">
+    <footer class="mt-10 w-full flex flex-col p-6 md:p-10 border-t">
 
-    <div class="flex flex-col md:flex-row justify-around items-start gap-8">
+        <div class="flex flex-col md:flex-row justify-around items-start gap-8">
 
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-lg">Socials</h1>
-        <div class="flex flex-row gap-4">
-          <a href="https://github.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-github fa-2xl"></i>
-          </a>
-          <a href="https://www.facebook.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-facebook fa-2xl"></i>
-          </a>
-          <a href="https://www.instagram.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-instagram fa-2xl"></i>
-          </a>
-          <a href="https://www.tiktok.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-tiktok fa-2xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-linkedin fa-2xl"></i>
-          </a>
+            <div class="flex flex-col gap-4">
+                <h1 class="font-bold text-lg">Socials</h1>
+                <div class="flex flex-row gap-4">
+                    <a href="https://github.com/" class="hover:opacity-70 transition">
+                        <i class="fab fa-github fa-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" class="hover:opacity-70 transition">
+                        <i class="fab fa-facebook fa-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="hover:opacity-70 transition">
+                        <i class="fab fa-instagram fa-2xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/" class="hover:opacity-70 transition">
+                        <i class="fab fa-tiktok fa-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="hover:opacity-70 transition">
+                        <i class="fab fa-linkedin fa-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <h1 class="font-bold text-lg">Contact us</h1>
+                <a href="https://mail.google.com/" class="flex items-center gap-2 hover:opacity-70 transition">
+                    <i class="fas fa-envelope fa-2xl"></i>
+                    <span>javanews@dev.com</span>
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <h1 class="font-bold text-lg">About Us</h1>
+                <p class="tracking-wide">The Best News Site for Java Developers.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-lg">Contact us</h1>
-        <a href="https://mail.google.com/" class="flex items-center gap-2 hover:opacity-70 transition">
-          <i class="fas fa-envelope fa-2xl"></i>
-          <span>javanews@dev.com</span>
-        </a>
-      </div>
+        <p class="text-sm text-gray-400 text-center mt-8">© <span id="year"></span> JavaNews</p>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-lg">About Us</h1>
-        <p class="tracking-wide">The Best News Site for Java Developers.</p>
-      </div>
-    </div>
-
-    <p class="text-sm text-gray-400 text-center mt-8">© <span id="year"></span> JavaNews</p>
-
-  </footer>
+    </footer>
 
 </body>
 
