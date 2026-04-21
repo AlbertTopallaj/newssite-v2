@@ -10,18 +10,21 @@
 </head>
 
 <body>
-    <form
+    <form onsubmit="handleLogin(event)"
         class="flex flex-col gap-2 w-full max-w-md mx-auto mt-20 p-10 bg-white rounded-xl shadow-sm border border-gray-200">
         <h2 class="text-xl font-bold text-gray-800 mb-2">Admin Login</h2>
         <span class="text-sm font-medium text-gray-600 mt-2">Username</span>
-        <input
+        <input id="username" type="text"
             class="px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:border-gray-500 transition"
             placeholder="Enter your username"></input>
         <span class="text-sm font-medium text-gray-600 mt-2">Password</span>
-        <input
+        <input id="password" type="password"
             class="px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:border-gray-500 transition"
             placeholder="Enter your password"></input>
-        <button
+
+            <p id="error" class="text-red-500 text-sm hidden">Error: Wrong User Credentials, try again</p>
+
+        <button 
             class="mt-4 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition cursor-pointer">Login</button>
     </form>
 
@@ -67,7 +70,7 @@
         <p class="text-sm text-gray-400 text-center mt-8">© <span id="year"></span> JavaNews</p>
 
     </footer>
-
+ <script src="/src/script.js"></script>
 </body>
 
 </html>
