@@ -5,11 +5,18 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const content = document.getElementById('content').value
 
     if(!title.trim()){
-        showToast('Titel saknas', 'warning')
+        showToast('Title is missing, try again', 'error')
+        return
+    }
+
+    if(!content.trim()){
+        showToast('Content is missing, try again', 'error')
         return
     }
 
     const articles = JSON.parse(localStorage.getItem('articles') || '[]')
+
+    console.log(articles)
 
     articles.push({
         id: Date.now(),
