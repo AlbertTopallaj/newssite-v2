@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet">
     <title>Admin Dashboard | Java Devnews</title>
 </head>
 <body>
 
-    <a href="createarticle.html">Create Article</a>
+    <h2 class="text-4xl text-wrap text-center mt-5">Admin Dashboard</h2>
+    <a class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white text-sm ml-5 font-semibold 
+    hover:bg-indigo-500 hover:shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:shadow-md 
+    transition-all duration-200 ease-out rounded-xl shadow-lg" href="createarticle.html">Create Article</a>
+
+    <article class="flex flex-col gap-4" id="articles"></article>
 
     
+    <script src="src/create-article.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/toasts.js"></script>
+    <script src="src/display-article.js"></script>
 </body>
 </html>
