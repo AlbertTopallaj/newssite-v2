@@ -9,7 +9,15 @@
     <title>Login For Admin | Devnews Java</title>
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
+    <ul class="flex flex-row justify-end gap-5 text-center fixed h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50">
+    <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
+    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="login.html">Login</a></li>
+  </ul>
+
     <form onsubmit="handleLogin(event)"
         class="flex flex-col gap-2 w-full max-w-md mx-auto mt-20 p-10 bg-white rounded-xl shadow-sm border border-gray-200">
         <h2 class="text-xl font-bold text-gray-800 mb-2">Admin Login</h2>
