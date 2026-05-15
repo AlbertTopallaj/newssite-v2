@@ -22,7 +22,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
         id: Date.now(),
         title,
         content,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        likes: 0,
+        dislikes: 0,
+        comments: []
     })
 
     localStorage.setItem('articles', JSON.stringify(articles))

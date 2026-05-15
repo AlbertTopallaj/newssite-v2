@@ -23,3 +23,9 @@ if(!article) {
     container.append(date)
     container.append(content)
 }
+
+window.article = article
+window.articles = articles
+
+console.log("article.js loaded")
+console.log(window.article)

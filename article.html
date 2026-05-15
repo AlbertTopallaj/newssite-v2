@@ -9,14 +9,33 @@
 </head>
 
 <body class="flex flex-col min-h-screen p-10 max-w-3xl mx-auto">
-    
+
     <a href="admin.html" class="text-indigo-600 hover:underline mb-6">← Back</a>
 
     <div id="article-container"></div>
 
     <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
 
-<script src="src/article.js"></script>
+
+
+
+
+    <button id="like-btn">Like</button>
+    <span id="likes"></span>
+
+
+    <button id="dislike-btn">Dislike</button>
+    <span id="dislikes"></span>
+
+
+    <input class="comment-input" type="text" id="comment" placeholder="Write a comment">
+    <button class="send-commentbtn" id="send-comment">Send comment</button>
+    <div class="comment-section" id="comment-section"></div>
+
+
+    <script src="src/article.js"></script>
+    <script src="src/commentsection.js"></script>
+    <script src="src/likes.js"></script>
 </body>
 
 </html>
