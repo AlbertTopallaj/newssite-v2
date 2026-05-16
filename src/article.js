@@ -5,7 +5,10 @@ const article = articles.find(a => a.id == id)
 const container = document.getElementById('article-container')
 
 if(!article) {
-    container.textContent = '<h1 class="text-2xl">Article not found</h1>'
+    const msg = document.createElement('h1')
+    msg.textContent = 'Artikel hittades inte'
+    msg.className = 'text-2xl text-gray-400 text-center py-16'
+    container.append(msg)
 } else {
     const title = document.createElement('h1')
     title.className = 'text-4xl font-bold mb-4'

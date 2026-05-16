@@ -29,6 +29,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
     })
 
     localStorage.setItem('articles', JSON.stringify(articles))
-    showToast('Artikel skapad!', 'success')
+    showToast('Article successfully created!', 'success')
     e.target.reset()
 })

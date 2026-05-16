@@ -12,30 +12,33 @@ if (articles.length === 0) {
     container.append(msg)
 } else {
     articles.forEach((article) => {
-        const div = document.createElement('div')
-        div.className = 'w-full p-2 shadow-2xl my-4 hover:bg-gray-500 cursor-pointer'
+        const card = document.createElement('div')
+        card.className = 'flex flex-col gap-2 px-6 py-2 border-b border-gray-200 hover:bg-gray-50 cursor-pointer'
 
-        div.addEventListener('click', (e) => {
+        card.addEventListener('click', (e) => {
             window.location.href = 'article.html?id=' + article.id
         })
 
-        const title = document.createElement('h1')
-        title.className = 'text-4xl m-5 p-10 text-wrap'
+        const title = document.createElement('h2')
+        title.className = 'font-semibold text-gray-800'
         title.textContent = article.title
 
         const content = document.createElement('p')
-        content.className = 'm-5'
+        content.className = 'text-sm text-gray-500'
         content.textContent = article.content.length > 60
         ? article.content.slice(0, 60) + '...'
         : article.content
 
         const date = document.createElement('span')
-        date.className = 'm-5'
+        date.className = 'text-xs text-gray-400'
         date.textContent = 'Created: ' + new Date(article.createdAt).toLocaleDateString('sv-SE')
+
+        const footer = document.createElement('div')
+        footer.className = 'flex items-center justify-between'
 
         const deleteBtn = document.createElement('button')
         deleteBtn.textContent = 'Delete'
-        deleteBtn.className = 'ml-5 mt-3 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500'
+        deleteBtn.className = 'text-sm text-red-500 hover:text-red-700'
         deleteBtn.addEventListener('click', (e) => {
             e.stopPropagation()
             const all = JSON.parse(localStorage.getItem('articles') || '[]')
@@ -45,11 +48,13 @@ if (articles.length === 0) {
             renderArticles()
         })
 
-        div.append(title)
-        div.append(content)
-        div.append(deleteBtn)
-        div.append(date)
-        container.appendChild(div)
+        footer.appendChild(deleteBtn)
+        footer.appendChild(date)
+
+        card.appendChild(title)
+        card.appendChild(content)
+        card.appendChild(footer)
+        container.appendChild(card)
     })
   }
  
