@@ -1,3 +1,5 @@
+console.log("renderArticle.js loaded")
+
 const container = document.getElementById('articles')
 
 function renderArticles(){
