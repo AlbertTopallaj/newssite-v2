@@ -15,7 +15,7 @@ function renderArticles() {
         return
     }
 
-    articles.forEach(article => {
+    articles.reverse().forEach(article => {
         const card = document.createElement('div')
         card.className = 'relative flex flex-col gap-1 py-6 px-4 md:px-0 border-b border-gray-200 cursor-pointer group transition-all duration-150 hover:bg-gray-50 hover:px-3 hover:rounded-md hover:border-transparent';
 
