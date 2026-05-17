@@ -1,84 +1,116 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Home | Java News Site</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/src/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>Home | Java News Site</title>
-</head>
+  <body class="flex flex-col min-h-screen">
+    <ul
+      class="flex flex-row justify-end gap-5 text-center fixed h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50"
+    >
+      <li class="mr-auto cursor-pointer text-xl font-bold">
+        <a href="index.html">Java Dev News</a>
+      </li>
+      <li class="cursor-pointer text-l md:text-xl hover:text-gray-500">
+        <a href="#latest-news">Latest News</a>
+      </li>
+      <li class="cursor-pointer text-l md:text-xl hover:text-gray-500">
+        <a href="#java">Java</a>
+      </li>
+      <li class="cursor-pointer text-l md:text-xl hover:text-gray-500">
+        <a href="#springboot">Spring Boot</a>
+      </li>
+      <li class="cursor-pointer text-l md:text-xl hover:text-gray-500">
+        <a href="login.html">Login</a>
+      </li>
+    </ul>
 
-<body class="flex flex-col min-h-screen">
-  <ul class="flex flex-row justify-end gap-5 text-center fixed h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50">
-    <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="login.html">Login</a></li>
-  </ul>
+    <div class="flex flex-row">
+      <aside
+        class="hidden md:flex flex-col w-64 shrink-0 px-6 py-6 border-r border-gray-200 sticky top-16 h-screen"
+        id="sidebar"
+      >
+        <p
+          class="text-xs font-semibold tracking-widest uppercase text-gray-400 pb-3 border-b-2 border-gray-800 mb-4"
+        >
+          Latest News
+        </p>
+        <div id="latest-news" class="flex flex-col gap-3"></div>
+      </aside>
 
-  <div class="flex flex-row">
-    <aside class="hidden md:flex flex-col w-64 shrink-0 px-6 py-6 border-r border-gray-200 sticky top-16 h-screen"
-      id="sidebar">
-      <p class="text-xs font-semibold tracking-widest uppercase text-gray-400 pb-3 border-b-2 border-gray-800 mb-4">
-        Latest News</p>
-      <div id="latest-news" class="flex flex-col gap-3"></div>
-    </aside>
+      <article
+        class="flex flex-col w-full mx-auto px-6 pt-24 pb-10"
+        id="articles"
+      ></article>
+    </div>
 
-    <article class="flex flex-col w-full mx-auto px-6 pt-24 pb-10" id="articles"></article>
+    <footer class="mt-10 w-full flex flex-col p-6 md:p-10 border-t">
+      <div class="flex flex-col md:flex-row justify-around items-start gap-8">
+        <div class="flex flex-col gap-4">
+          <h1 class="font-bold text-lg">Socials</h1>
+          <div class="flex flex-row gap-4">
+            <a href="https://github.com/" class="hover:opacity-70 transition">
+              <i class="fab fa-github fa-2xl"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              class="hover:opacity-70 transition"
+            >
+              <i class="fab fa-facebook fa-2xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              class="hover:opacity-70 transition"
+            >
+              <i class="fab fa-instagram fa-2xl"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              class="hover:opacity-70 transition"
+            >
+              <i class="fab fa-tiktok fa-2xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              class="hover:opacity-70 transition"
+            >
+              <i class="fab fa-linkedin fa-2xl"></i>
+            </a>
+          </div>
+        </div>
 
-  </div>
-
-  <footer class="mt-10 w-full flex flex-col p-6 md:p-10 border-t">
-
-    <div class="flex flex-col md:flex-row justify-around items-start gap-8">
-
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-lg">Socials</h1>
-        <div class="flex flex-row gap-4">
-          <a href="https://github.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-github fa-2xl"></i>
+        <div class="flex flex-col gap-4">
+          <h1 class="font-bold text-lg">Contact us</h1>
+          <a
+            href="https://mail.google.com/"
+            class="flex items-center gap-2 hover:opacity-70 transition"
+          >
+            <i class="fas fa-envelope fa-2xl"></i>
+            <span>javanews@dev.com</span>
           </a>
-          <a href="https://www.facebook.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-facebook fa-2xl"></i>
-          </a>
-          <a href="https://www.instagram.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-instagram fa-2xl"></i>
-          </a>
-          <a href="https://www.tiktok.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-tiktok fa-2xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/" class="hover:opacity-70 transition">
-            <i class="fab fa-linkedin fa-2xl"></i>
-          </a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h1 class="font-bold text-lg">About Us</h1>
+          <p class="tracking-wide">The Best News Site for Java Developers.</p>
         </div>
       </div>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-lg">Contact us</h1>
-        <a href="https://mail.google.com/" class="flex items-center gap-2 hover:opacity-70 transition">
-          <i class="fas fa-envelope fa-2xl"></i>
-          <span>javanews@dev.com</span>
-        </a>
-      </div>
+      <p class="text-sm text-gray-400 text-center mt-8">
+        © <span id="year"></span> JavaNews
+      </p>
+    </footer>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-lg">About Us</h1>
-        <p class="tracking-wide">The Best News Site for Java Developers.</p>
-      </div>
-    </div>
-
-    <p class="text-sm text-gray-400 text-center mt-8">© <span id="year"></span> JavaNews</p>
-
-  </footer>
-
-
-  <script src="/src/script.js"></script>
-  <script src="/src/tags.js"></script>
-  <script src="/src/sidebar.js"></script>
-  <script src="/src/render-article.js"></script>
-
-</body>
-
+    <script src="/src/script.js"></script>
+    <script src="/src/tags.js"></script>
+    <script src="/src/sidebar.js"></script>
+    <script src="/src/render-article.js"></script>
+  </body>
 </html>

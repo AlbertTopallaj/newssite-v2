@@ -1,51 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <title>Article | Java Dev News</title>
-</head>
+  </head>
 
-<body class="flex flex-col min-h-screen max-w-2xl mx-auto px-6 py-10">
-
-    <a href="index.html" class="text-m text-gray-400 hover:text-gray-600 mb-8">← Back</a>
+  <body class="flex flex-col min-h-screen max-w-2xl mx-auto px-6 py-10">
+    <a href="index.html" class="text-m text-gray-400 hover:text-gray-600 mb-8"
+      >← Back</a
+    >
 
     <div id="article-container" class="mb-8"></div>
 
-    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+    <div
+      id="toast-container"
+      class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"
+    ></div>
 
     <div class="flex items-center gap-4 mb-10">
-        <button id="like-btn"
-            class="flex items-center gap-1 text-sm text-gray-500 hover:text-green-600 transition-colors">
-            <i class="fa-regular fa-thumbs-up fa-lg"></i>
-            <span id="likes"></span>
-        </button>
+      <button
+        id="like-btn"
+        class="flex items-center gap-1 text-sm text-gray-500 hover:text-green-600 transition-colors"
+      >
+        <i class="fa-regular fa-thumbs-up fa-lg"></i>
+        <span id="likes"></span>
+      </button>
 
-        <button id="dislike-btn"
-            class="flex items-center gap-1 text-sm text-gray-500 hover:text-red-500 transition-colors">
-            <i class="fa-regular fa-thumbs-down fa-lg"></i>
-            <span id="dislikes"></span>
-        </button>
+      <button
+        id="dislike-btn"
+        class="flex items-center gap-1 text-sm text-gray-500 hover:text-red-500 transition-colors"
+      >
+        <i class="fa-regular fa-thumbs-down fa-lg"></i>
+        <span id="dislikes"></span>
+      </button>
     </div>
 
     <div class="border-t border-gray-200 pt-8">
-        <h3 class="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-4">Comments
-            <i class="fa-regular fa-comment fa-sm mr-1"></i>
-            <span id="comment-count" class="normal-case font-normal text-gray-400"></span>
-        </h3>
+      <h3
+        class="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-4"
+      >
+        Comments
+        <i class="fa-regular fa-comment fa-sm mr-1"></i>
+        <span
+          id="comment-count"
+          class="normal-case font-normal text-gray-400"
+        ></span>
+      </h3>
 
-        <div class="flex flex-col gap-3 mb-6" id="comment-section"></div>
+      <div class="flex flex-col gap-3 mb-6" id="comment-section"></div>
 
-        <div class="flex gap-2">
-            <input type="text" id="comment" placeholder="Write a comment..."
-                class="flex-1 border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-gray-400">
+      <div class="flex gap-2">
+        <input
+          type="text"
+          id="comment"
+          placeholder="Write a comment..."
+          class="flex-1 border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-gray-400"
+        />
 
-            <button id="send-comment" class="px-4 py-2 text-sm border border-gray-300 rounded-md text-gray-700
-            hover:bg-gray-50 transition-colors">Send comment</button>
-        </div>
+        <button
+          id="send-comment"
+          class="px-4 py-2 text-sm border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+        >
+          Send comment
+        </button>
+      </div>
     </div>
 
     <script src="/src/toasts.js"></script>
@@ -53,6 +77,5 @@
     <script src="/src/tags.js"></script>
     <script src="src/commentsection.js"></script>
     <script src="src/likes.js"></script>
-</body>
-
+  </body>
 </html>
