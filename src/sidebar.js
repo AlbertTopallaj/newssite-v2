@@ -41,6 +41,13 @@ function renderSidebar() {
         item.appendChild(date)
         container.appendChild(item)
     })
+
+    if(latest.length === 0){
+        const msg = document.createElement('p')
+        msg.textContent = 'No latest news yet.'
+        msg.className = 'text-sm text-gray-400 text-center mt-4'
+        container.appendChild(msg)
+    }
 }
 
 renderSidebar()

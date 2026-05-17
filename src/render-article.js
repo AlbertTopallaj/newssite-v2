@@ -9,7 +9,7 @@ function renderArticles() {
 
     if (articles.length === 0) {
         const msg = document.createElement('h1')
-        msg.textContent = 'No articles yet'
+        msg.textContent = 'No articles yet.'
         msg.className = 'text-center text-gray-400 py-16 text-lg'
         container.appendChild(msg)
         return
