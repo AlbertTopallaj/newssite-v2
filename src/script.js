@@ -1,6 +1,3 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
-
 function handleLogin(e) {
     e.preventDefault();
     const username = document.getElementById("username").value;
