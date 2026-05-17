@@ -10,3 +10,7 @@ function handleLogin(e) {
         document.getElementById("error").classList.remove("hidden");
     }
 }
+
+if(localStorage.getItem('isLoggedIn')){
+    window.location.href = 'admin.html'
+}
