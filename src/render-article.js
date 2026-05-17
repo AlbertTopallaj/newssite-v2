@@ -50,7 +50,7 @@ function renderArticles() {
         title.className = 'text-xl font-bold'
 
         const preview = document.createElement('p')
-        preview.textContent = article.content.length > 100 ? article.content.slice(0, 100) + '...'
+        preview.textContent = article.content.length > 60 ? article.content.slice(0, 60) + '...'
             : article.content
 
         card.appendChild(topRow)
