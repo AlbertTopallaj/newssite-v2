@@ -17,3 +17,16 @@ function renderGreeting(){
 }
 
 renderGreeting()
+
+function renderClock(){
+    const el = document.createElement('p')
+    el.className = 'text-gray-400 text-center text-sm mt-1'
+    document.querySelector('h2').nextSibling.after(el)
+
+    setInterval(() =>{
+        const now = new Date()
+        el.textContent = now.toLocaleDateString('sv-SE') + ' ' + now.toLocaleTimeString('sv-SE')
+    }, 1000)
+}
+
+renderClock()
