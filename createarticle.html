@@ -11,12 +11,8 @@
     <title>Create Article | Java Devnews</title>
   </head>
 
-  <body>
-    <a
-      href="admin.html"
-      class="text-sm text-gray-400 hover:text-gray-600 mb-8 inline-block"
-      >← Back</a
-    >
+  <body class="pt-6 pl-6">
+    <a href="admin.html" class="text-base text-gray-400 hover:text-gray-600 mb-8 inline-block">← Back</a>
     <form class="flex flex-col gap-2 max-w-md mx-auto mt-10">
       <label class="text-sm font-medium text-gray-700">Title</label>
       <input
@@ -37,14 +33,14 @@
       </select>
 
       <div class="flex items-center gap-2">
-        <label class="text-sm font-medium text-gray-700"
-          >Is this a latest news?</label
-        >
-        <input
-          type="checkbox"
-          class="w-4 h-4 cursor-pointer px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500"
-          id="latestnews-checkbox"
-        />
+      <label class="text-sm font-medium text-gray-700"
+        >Is this a latest news?</label
+      >
+      <input
+        type="checkbox"
+        class="w-4 h-4 cursor-pointer px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500"
+        id="latestnews-checkbox"
+      />
       </div>
 
       <label class="text-sm font-medium text-gray-700">Content</label>
@@ -124,7 +120,8 @@
       class="fixed bottom-6 right-5 flex flex-col gap-2"
     ></div>
   </body>
-  <script src="src/toasts.js"></script>
+  <script src="/src/utils.js"></script>
+  <script src="/src/toasts.js"></script>
   <script src="/src/tags.js"></script>
   <script src="src/create-article.js"></script>
 </html>
