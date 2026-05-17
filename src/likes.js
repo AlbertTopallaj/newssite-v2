@@ -6,14 +6,14 @@ const dislikeBtn = document.getElementById('dislike-btn');
 likes.textContent = article.likes;
 dislikes.textContent = article.dislikes;
 
-function like(){
+function like() {
     article.likes++;
     localStorage.setItem("articles", JSON.stringify(articles));
     likes.textContent = article.likes;
 
 }
 
-function dislike(){
+function dislike() {
     article.dislikes++;
     localStorage.setItem("articles", JSON.stringify(articles));
     dislikes.textContent = article.dislikes;

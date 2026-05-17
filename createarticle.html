@@ -11,25 +11,31 @@
 
 <body>
 
-      <a href="admin.html" class="text-indigo-600 hover:underline mb-6">← Back</a>
+    <a href="admin.html" class="text-indigo-600 hover:underline mb-6">← Back</a>
     <form class="flex flex-col gap-2 max-w-md mx-auto mt-10">
         <label class="text-sm font-medium text-gray-700">Title</label>
-        <input id="title" placeholder="Enter a title for the article..." type="text" class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500">
+        <input id="title" placeholder="Enter a title for the article..." type="text"
+            class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500">
 
         <label class="text-sm font-medium text-gray-700">Category</label>
-        <select id="category" class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500">
+        <select id="category"
+            class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500">
             <option value="">No Category</option>
             <option value="java">Java</option>
             <option value="springboot">Spring Boot</option>
         </select>
 
         <label class="text-sm font-medium text-gray-700">Is this a latest news?</label>
-        <input type="checkbox" class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500" id="latestnews-checkbox">
+        <input type="checkbox"
+            class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500"
+            id="latestnews-checkbox">
 
         <label class="text-sm font-medium text-gray-700">Content</label>
-        <textarea id="content" placeholder="Enter the content for the article..." class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500 resize-none h-40"></textarea>
+        <textarea id="content" placeholder="Enter the content for the article..."
+            class="px-4 py-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-blue-500 resize-none h-40"></textarea>
 
-        <button type="submit" class="mt-2 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg cursor-pointer">Create</button>
+        <button type="submit"
+            class="mt-2 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg cursor-pointer">Create</button>
     </form>
 
     <div id="toast-container" class="fixed bottom-6 right-5 flex flex-col gap-2"></div>
@@ -37,4 +43,5 @@
 <script src="src/toasts.js"></script>
 <script src="/src/tags.js"></script>
 <script src="src/create-article.js"></script>
+
 </html>

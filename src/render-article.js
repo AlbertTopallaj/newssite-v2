@@ -26,14 +26,14 @@ function renderArticles() {
         const topRow = document.createElement('div')
         topRow.className = 'flex items-center gap-2'
 
-        if(article.category) {
+        if (article.category) {
             const tag = document.createElement('span')
             tag.textContent = article.category
             tag.className = `text-[11px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded ${getTagClass(article.category)}`
             topRow.appendChild(tag)
         }
 
-        if(article.latestnew){
+        if (article.latestnew) {
             const tag = document.createElement('span')
             tag.textContent = 'Latest News'
             tag.className = 'text-[11px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-red-100 text-red-800'

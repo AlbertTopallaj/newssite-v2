@@ -10,13 +10,14 @@
 </head>
 
 <body class="flex flex-col min-h-screen">
-    <ul class="flex flex-row justify-end gap-5 text-center fixed h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50">
-    <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="login.html">Login</a></li>
-  </ul>
+    <ul
+        class="flex flex-row justify-end gap-5 text-center fixed h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50">
+        <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="login.html">Login</a></li>
+    </ul>
 
     <form onsubmit="handleLogin(event)"
         class="flex flex-col gap-2 w-full max-w-md mx-auto mt-auto p-10 bg-white rounded-xl shadow-sm border border-gray-200">
@@ -30,9 +31,9 @@
             class="px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:border-gray-500 transition"
             placeholder="Enter your password"></input>
 
-            <p id="error" class="text-red-500 text-sm hidden">Error: Wrong User Credentials, try again</p>
+        <p id="error" class="text-red-500 text-sm hidden">Error: Wrong User Credentials, try again</p>
 
-        <button 
+        <button
             class="mt-4 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition cursor-pointer">Login</button>
     </form>
 
@@ -78,7 +79,7 @@
         <p class="text-sm text-gray-400 text-center mt-8">© <span id="year"></span> JavaNews</p>
 
     </footer>
- <script src="/src/script.js"></script>
+    <script src="/src/script.js"></script>
 </body>
 
 </html>

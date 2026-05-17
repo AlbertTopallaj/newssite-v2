@@ -4,7 +4,7 @@ const articles = JSON.parse(localStorage.getItem('articles') || '[]')
 const article = articles.find(a => a.id == id)
 const container = document.getElementById('article-container')
 
-if(!article) {
+if (!article) {
     const msg = document.createElement('h1')
     msg.textContent = 'Artikel hittades inte'
     msg.className = 'text-2xl text-gray-400 text-center py-16'

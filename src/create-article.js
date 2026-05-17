@@ -6,12 +6,12 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const category = document.getElementById('category').value
     const latestnew = document.getElementById('latestnews-checkbox').checked
 
-    if(!title.trim()){
+    if (!title.trim()) {
         showToast('Title is missing, try again', 'error')
         return
     }
 
-    if(!content.trim()){
+    if (!content.trim()) {
         showToast('Content is missing, try again', 'error')
         return
     }

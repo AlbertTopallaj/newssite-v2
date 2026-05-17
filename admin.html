@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link href="/src/style.css" rel="stylesheet">
     <title>Admin Dashboard | Java Devnews</title>
 </head>
+
 <body>
     <ul class="flex flex-row justify-end gap-5 text-center h-16 shadow-2xl top-0 right-0 left-0 p-5 bg-white z-50">
-    <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
-    <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="login.html">Login</a></li>
-  </ul>
+        <li class="mr-auto cursor-pointer text-xl font-bold"><a href="index.html">Java Dev News</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#latest-news">Latest News</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#java">Java</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="#springboot">Spring Boot</a></li>
+        <li class="cursor-pointer text-l md:text-xl hover:text-gray-500"><a href="login.html">Login</a></li>
+    </ul>
 
     <h2 class="text-4xl text-wrap text-center mt-5">Admin Dashboard</h2>
-    <a class="inline-flex items-center gap-2 px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colrs duration-150 ml-5" href="createarticle.html">Create Article</a>
+    <a class="inline-flex items-center gap-2 px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colrs duration-150 ml-5"
+        href="createarticle.html">Create Article</a>
 
     <article class="flex flex-col gap-4" id="articles"></article>
 
     <div id="toast-container" class="fixed bottom-6 right-5 flex flex-col gap-2"></div>
 
-    
+
     <script src="src/toasts.js"></script>
     <script src="src/create-article.js"></script>
     <script src="/src/tags.js"></script>
     <script src="src/script.js"></script>
     <script src="src/display-article.js"></script>
 </body>
+
 </html>

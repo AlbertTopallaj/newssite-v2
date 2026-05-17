@@ -30,7 +30,7 @@ function publishComment() {
     date.className = 'text-sm text-gray-500'
     date.textContent = new Date().toLocaleString('sv-SE')
 
-    article.comments.push({text: text, date: new Date().toLocaleString('sv-SE')});
+    article.comments.push({ text: text, date: new Date().toLocaleString('sv-SE') });
 
     localStorage.setItem("articles", JSON.stringify(articles));
 
