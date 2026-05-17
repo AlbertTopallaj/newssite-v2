@@ -33,6 +33,13 @@ function renderArticles() {
             topRow.appendChild(tag)
         }
 
+        if(article.latestnew){
+            const tag = document.createElement('span')
+            tag.textContent = 'Latest News'
+            tag.className = 'text-[11px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-red-100 text-red-800'
+            topRow.append(tag)
+        }
+
         const date = document.createElement('span')
         date.textContent = new Date(article.createdAt).toLocaleDateString('sv-SE')
         date.className = 'text-sm text-gray-400'

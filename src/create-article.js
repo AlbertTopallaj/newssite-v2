@@ -4,6 +4,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const title = document.getElementById('title').value
     const content = document.getElementById('content').value
     const category = document.getElementById('category').value
+    const latestnew = document.getElementById('latestnews-checkbox').checked
 
     if(!title.trim()){
         showToast('Title is missing, try again', 'error')
@@ -24,6 +25,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
         title,
         content,
         category,
+        latestnew,
         createdAt: new Date().toISOString(),
         likes: 0,
         dislikes: 0,

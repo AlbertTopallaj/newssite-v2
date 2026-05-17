@@ -2,7 +2,7 @@ function renderSidebar(){
     const articles = JSON.parse(localStorage.getItem('articles') || '[]')
     const container = document.getElementById('latest-news')
 
-    const latest = articles.slice(-5).reverse()
+    const latest = articles.filter(a => a.latestnew).reverse()
 
     latest.forEach(article =>{
         const item = document.createElement('a')
