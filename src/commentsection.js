@@ -3,13 +3,18 @@ const comment = document.getElementById('comment');
 const sendComment = document.getElementById('send-comment');
 
 article.comments.forEach(function (savedComment) {
-    const p = document.createElement('p');
+    const commentEl = document.createElement('p');
 
-    p.textContent = savedComment;
+    commentEl.textContent = savedComment.text;
 
-    p.className = 'text-sm text-gray-700 border-b border-gray-100 pb-2'
+    commentEl.className = 'text-sm text-gray-700 border-b border-gray-100 pb-2'
 
-    commentSection.appendChild(p);
+    const date = document.createElement('span')
+    date.className = 'text-sm text-gray-500'
+    date.textContent = savedComment.date
+
+    commentSection.appendChild(commentEl);
+    commentSection.appendChild(date)
 });
 
 
@@ -20,19 +25,23 @@ function publishComment() {
         showToast('The comment is empty', 'error')
         return
     }
-    
 
-    article.comments.push(text);
+    const date = document.createElement('span')
+    date.className = 'text-sm text-gray-500'
+    date.textContent = new Date().toLocaleString('sv-SE')
+
+    article.comments.push({text: text, date: new Date().toLocaleString('sv-SE')});
 
     localStorage.setItem("articles", JSON.stringify(articles));
 
-    const p = document.createElement('p');
+    const commentEl = document.createElement('p');
 
-    p.className = 'text-sm text-gray-700 border-b border-gray-100 pb-2'
+    commentEl.className = 'text-sm text-gray-700 border-b border-gray-100 pb-2'
 
-    p.textContent = text;
+    commentEl.textContent = text;
 
-    commentSection.appendChild(p);
+    commentSection.appendChild(commentEl)
+    commentSection.appendChild(date)
     comment.value = ''
 }
 
