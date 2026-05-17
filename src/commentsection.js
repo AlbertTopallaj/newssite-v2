@@ -43,6 +43,16 @@ function publishComment() {
     commentSection.appendChild(commentEl)
     commentSection.appendChild(date)
     comment.value = ''
+
+    updateCount()
 }
+
+function updateCount() {
+    const count = document.getElementById('comment-count')
+    count.textContent = '(' + article.comments.length + ')'
+
+}
+
+updateCount()
 
 sendComment.addEventListener('click', publishComment);
