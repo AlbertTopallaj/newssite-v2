@@ -30,3 +30,8 @@ if (!article) {
 
 window.article = article;
 window.articles = articles;
+
+const backBtn = document.querySelector('a')
+if(backBtn && localStorage.getItem('isLoggedIn')){
+    backBtn.href = 'admin.html'
+}
