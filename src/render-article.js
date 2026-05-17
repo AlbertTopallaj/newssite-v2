@@ -11,7 +11,7 @@ const TAGS = {
 function getTagClass(tag = '') {
     const key = tag.toLowerCase.replace(/\s+/g, '')
     return TAGS[key] || TAGS.default
-
+    
 }
 
 function renderArticles() {
