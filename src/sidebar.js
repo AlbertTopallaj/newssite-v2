@@ -7,7 +7,7 @@ function renderSidebar() {
     latest.forEach(article => {
         const item = document.createElement('a')
         item.href = 'article.html?id=' + article.id
-        item.className = 'flex flex-col gap-1 py-2 border-b border-gray-100 hover:text-blue-600 transition-colors'
+        item.className = 'flex flex-col gap-1 py-2 border-b border-gray-100 hover:text-blue-600 hover:translate-x-1 transition-all duration-150 cursor-pointer'
 
         const topRow = document.createElement('div')
         topRow.className = 'flex items-center gap-2 mb-1'
