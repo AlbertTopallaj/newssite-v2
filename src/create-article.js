@@ -3,6 +3,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     const title = document.getElementById('title').value
     const content = document.getElementById('content').value
+    const category = document.getElementById('category').value
 
     if(!title.trim()){
         showToast('Title is missing, try again', 'error')
@@ -22,6 +23,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
         id: Date.now(),
         title,
         content,
+        category,
         createdAt: new Date().toISOString(),
         likes: 0,
         dislikes: 0,

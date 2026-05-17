@@ -9,9 +9,9 @@ const TAGS = {
 }
 
 function getTagClass(tag = '') {
-    const key = tag.toLowerCase.replace(/\s+/g, '')
+    const key = tag.toLowerCase().replace(/\s+/g, '')
     return TAGS[key] || TAGS.default
-    
+
 }
 
 function renderArticles() {
@@ -29,11 +29,26 @@ function renderArticles() {
 
     articles.forEach(article => {
         const card = document.createElement('div')
-        card.className = 'relatvie flex flex-col gap-1 py-6 px-4 md:px-0 border-b border-gray-200 cursor-pointer group transition-all duration-150 hover:bg-gray-50 hover:px-3 hover:rounded-md hover:border-transparent',
+        card.className = 'relative flex flex-col gap-1 py-6 px-4 md:px-0 border-b border-gray-200 cursor-pointer group transition-all duration-150 hover:bg-gray-50 hover:px-3 hover:rounded-md hover:border-transparent';
 
         card.addEventListener('click', () => {
             window.location.href = 'article.html?id=' + article.id
         })
+
+        const topRow = document.createElement('div')
+        topRow.className = 'flex items-center gap-2'
+
+        if(article.category) {
+            const tag = document.createElement('span')
+            tag.textContent = article.category
+            tag.className = `text-[11px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded ${getTagClass(article.category)}`
+            topRow.appendChild(tag)
+        }
+
+        const date = document.createElement('span')
+        date.textContent = new Date(article.createdAt).toLocaleDateString('sv-SE')
+        date.className = 'text-sm text-gray-400'
+        topRow.appendChild(date)
 
         const title = document.createElement('h2')
         title.textContent = article.title;
@@ -43,14 +58,9 @@ function renderArticles() {
         preview.textContent = article.content.length > 100 ? article.content.slice(0, 100) + '...'
             : article.content
 
-        const date = document.createElement('span')
-        date.textContent = new Date(article.createdAt).toLocaleDateString('sv-SE')
-        date.className = 'text-sm text-gray-400'
-
+        card.appendChild(topRow)
         card.appendChild(title)
         card.appendChild(preview)
-        card.appendChild(date)
-
         container.appendChild(card)
 
     })
